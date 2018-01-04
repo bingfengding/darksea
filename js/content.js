@@ -32,7 +32,7 @@ $(function () {
     //个人简介
     rooma = function rooma(val) {
         if($("#room")[0]){
-            
+
         }else{
             var newUrl = "content.html?room";
             history.pushState({}, "", newUrl);
@@ -56,7 +56,7 @@ $(function () {
 
     //留言板
     var date = new Date(),
-                newDatW ,
+                newDateW ,
                 newHoursW ,
                 newMinutesW,
                 newMillisecondsW,

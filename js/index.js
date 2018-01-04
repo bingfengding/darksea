@@ -48,6 +48,20 @@ $(function () {
             'margin-top':len(50),
             'margin-left':len(360)
         });
+        $('#news dt').css({
+            'padding-left':len(10),
+            'line-height':len(20),
+            'font-size':len(14),
+        });
+        $('#news dd').css({
+            'line-height':len(20),
+            'height':len(20),
+            'font-size':len(12),
+        });
+        $('#affiche p').css({
+            'font-size':len(14),
+        });
+
     }
     one();
     $(window).resize(function () {
