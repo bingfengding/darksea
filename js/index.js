@@ -1,23 +1,31 @@
 $(function () {
     var top = document.documentElement ? document.documentElement : document.body;
-    function setRem(number) {
-        if (top.clientWidth>640){
-            top.style.fontSize = '10px';
-        }else {
-            top.style.fontSize = (top.clientWidth / 64)+'px';
-        }
-        var rem =top.style.fontSize;
-        return number*rem +"px";
+    if (top.clientWidth>640){
+        top.style.fontSize = '10px';
+    }else {
+        top.style.fontSize = (top.clientWidth/64)+'px';
     }
-
+    function setRem(number) {
+        var rema =top.style.fontSize;
+        return number* parseFloat(rema) + 'px';
+    }
     function len(num) {
         var _clientWidth = document.documentElement.clientWidth;
         num = _clientWidth/1004*num;
         return num+'px';
     }
+     timer=setTimeout(function () {
+        document.documentElement.scrollTop = parseFloat(len(300));
+        clearTimeout(timer);
+    },50);
 
+    //CSS设置
     function one() {
-        $('#indexPart').css('height',len(546));
+        $('#indexPart').css({
+                'height':len(546),
+                'marginTop':len(-5)
+        });
+
         $('.top').css({
             'height':len(572),
             'width':len(1004)
@@ -43,7 +51,7 @@ $(function () {
     }
     one();
     $(window).resize(function () {
-            one()
+            one();
     }
     );
 
