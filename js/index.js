@@ -18,6 +18,36 @@ $(function () {
         document.documentElement.scrollTop = parseFloat(len(300));
         clearTimeout(timer);
     },50);
+    home = function home() {
+        $('html,body').animate({scrollTop:parseFloat(len(512))},1000);
+    };
+    treasure = function treasure() {
+        var pwd = prompt("请输入验证码","");
+        $.ajax({
+            url: "./php/treasure.php",
+            type: "POST",
+            data: {
+                pwd: pwd
+            },
+            success: function (response, status, xhr) {
+                if (!response) {
+                    alert("验证码错误，私人空间非邀请人暂时不开放");
+
+
+                } else {
+                    alert(123);
+                    window.location.href = response;
+
+                }
+            }
+    });
+    };
+
+    $('.door').click(function () {
+        $('html,body').animate({scrollTop:0},1000);
+    });
+
+
 
     //CSS设置
     function one() {
@@ -31,7 +61,7 @@ $(function () {
             'width':len(1004)
         });
         $('#affiche').css({
-            width:len(130),
+            'width':len(130),
             'height':len(120),
             'margin-top':len(120),
             'margin-left':len(25)
@@ -61,7 +91,14 @@ $(function () {
         $('#affiche p').css({
             'font-size':len(14),
         });
-
+        $('.door').css({
+            'width':len(98),
+            'height':len(160),
+            'position':'absolute',
+            'top':len(50),
+            'left':len(240),
+            'background-color':'transparent'
+        })
     }
     one();
     $(window).resize(function () {

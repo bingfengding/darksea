@@ -26,28 +26,20 @@ i {
 #indexPart {
   background: url("../images/bottombg.jpg") no-repeat;
   background-size: 100%;
+  position: relative;
 }
 #news {
   position: absolute;
 }
 #news dt {
-  padding: 0 0 0 1rem;
   font-weight: bold;
-  line-height: 2rem;
   border-bottom: 1px solid #44370c;
-  font-size: 1.6rem;
 }
 #news dd {
-  height: 2rem;
-  line-height: 2rem;
   border-bottom: 1px dashed #44370c;
-  font-size: 1.4rem;
 }
 #affiche {
   position: absolute;
-}
-#affiche p {
-  font-size: 1.6rem;
 }
 #copyright {
   float: right;

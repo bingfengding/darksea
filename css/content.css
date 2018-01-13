@@ -127,6 +127,9 @@ i {
 #conPart #fatherContent #content #massage #massageForm {
   display: none;
 }
+#conPart #fatherContent #content #massage #massageForm .userM span {
+  vertical-align: middle;
+}
 #conPart #fatherContent #content #massage #massageForm .userM input {
   background-color: #f0f0c8;
   border-radius: 0.3rem;
@@ -151,18 +154,6 @@ i {
   display: inline-block;
   border: 0;
   outline: none;
-}
-.commonly {
-  width: 10rem;
-}
-.good {
-  width: 20rem;
-}
-.skilled {
-  width: 30rem;
-}
-.master {
-  width: 40rem;
 }
 #granddadContent {
   position: absolute;

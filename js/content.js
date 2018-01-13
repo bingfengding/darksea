@@ -85,6 +85,7 @@ $(function () {
             $('.massageIpt').hide();
         });
         $('#massageSub').click(function () {
+            $('#massageSub').attr("disabled", true);
             $.ajax({
                 type: "POST",
                 url: './php/massage.php',
@@ -131,6 +132,7 @@ $(function () {
 
                     $("form .user").val("");
                     $("form .massageContent").val("");
+                    $('#massageSub').attr("disabled", false);
                 }
             })
         });
@@ -160,6 +162,39 @@ $(function () {
         one();
     }
     };
+
+    //藏宝阁
+    treasurea = function treasurea(val) {
+        var pwd = prompt("请输入验证码","");
+        $.ajax({
+            url: "./php/treasure.php",
+            type:"POST",
+            data:{
+                pwd:pwd
+            },
+            success:function (response, status, xhr) {
+                if(response){
+                    window.location.href = response;
+                }else{
+                    alert("验证码错误，私人空间非邀请人暂时不开放");
+                }
+
+
+
+
+
+            }
+
+
+
+
+
+        })
+
+
+
+    };
+
         if(location.search=="?address"){
             tela();
     } else if(location.search=="?room"){
@@ -222,10 +257,13 @@ $(function () {
         });
         $('#massageForm').css({
             'padding-left':len(10),
-            'font-size':len(14)
         });
         $('#massageForm .userM').css({
             'padding-bottom':len(10),
+        });
+        $('#massageForm .userM span').css({
+            'height':len(25),
+            'line-height':len(25),
         });
         $('#massage li p').css({
             'padding-bottom':len(10),
@@ -234,10 +272,12 @@ $(function () {
         $("#massageForm .userM input").css({
             'width':len(200),
             'height' :len(25),
+            'font-size':len(14)
         });
         $("#massageForm textarea").css({
             'width':len(400),
             'height' :len(250),
+            'font-size':len(14)
         });
         $("#massageForm .footerForm").css({
             'padding-top':len(10),
@@ -246,6 +286,9 @@ $(function () {
         $("#massageForm .footerForm input").css({
             'width':len(40),
             'height':len(25),
+            'font-size':len(14),
+            'border-radius':len(5),
+
         });
         $("#massageSub").css({
             'margin-left':len(250),
@@ -325,6 +368,11 @@ $(function () {
             'padding-right':len(20),
             'padding-left':len(10),
             'font-size':len(12),
+
+        });
+        $("#lift li").css({
+            'padding':len(5),
+
 
         });
         $("#lift p").css({
