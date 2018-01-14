@@ -28,7 +28,7 @@ $(function () {
         });
         $(this).children("a").children("div").css({
             "transition":"0.5s",
-            "transform":"translate(0,60%)"
+            "transform":"translate(0,0)"
         })
     });
 
@@ -40,7 +40,6 @@ $(function () {
             "margin-left":setRem(400),
             "padding-left":setRem(10),
             "padding-top":setRem(5),
-            //"backgroundColor":"rgba(0,0,0,0.3)",
         });
         $('#sample li').css({
             "width":setRem(160),

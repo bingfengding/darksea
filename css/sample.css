@@ -5,10 +5,11 @@
   font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";
 }
 body {
-  overflow-x: hidden;
   color: #363636;
   background: url("../images/3.jpg") no-repeat;
   background-size: 100% auto;
+  overflow: scroll;
+  overflow-y: hidden;
 }
 img {
   border: 0;

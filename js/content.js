@@ -165,33 +165,7 @@ $(function () {
 
     //藏宝阁
     treasurea = function treasurea(val) {
-        var pwd = prompt("请输入验证码","");
-        $.ajax({
-            url: "./php/treasure.php",
-            type:"POST",
-            data:{
-                pwd:pwd
-            },
-            success:function (response, status, xhr) {
-                if(response){
-                    window.location.href = response;
-                }else{
-                    alert("验证码错误，私人空间非邀请人暂时不开放");
-                }
-
-
-
-
-
-            }
-
-
-
-
-
-        })
-
-
+        window.location.href = "http://www.mydarksea.com/home/treasure.html";
 
     };
 

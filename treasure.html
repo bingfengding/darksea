@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        var pwd = prompt("请输入验证码","");
+        $.ajax({
+            url: "./php/treasure.php",
+            type: "POST",
+            data: {
+                pwd: pwd
+            },
+            success: function (response, status, xhr) {
+                if (!response) {
+                    if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)){ // IE
+                        if(history.length > 0){
+                            window.history.go( -1 );
+                        }else{
+                            window.opener=null;window.close();
+                        }
+                    }else{ //非IE浏览器
+                        if (navigator.userAgent.indexOf('Firefox') >= 0 ||
+                            navigator.userAgent.indexOf('Opera') >= 0 ||
+                            navigator.userAgent.indexOf('Safari') >= 0 ||
+                            navigator.userAgent.indexOf('Chrome') >= 0 ||
+                            navigator.userAgent.indexOf('WebKit') >= 0){
+
+                            if(window.history.length > 1){
+                                window.history.go( -1 );
+                            }else{
+                                window.opener=null;window.close();
+                            }
+                        }else{ //未知的浏览器
+                            window.history.go( -1 );
+                        }
+                    }
+                    alert("验证码错误，私人空间非邀请人暂时不开放");
+                }
+            }
+        });
+    </script>
 </head>
 <body>
-    <p>藏宝阁开发中</p>
+    <p>藏宝阁开发中1</p>
 </body>
 </html>
