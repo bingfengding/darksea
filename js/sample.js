@@ -14,7 +14,7 @@ $(function () {
     $('#sample li').hover(function () {
         $(this).css({
             "transition":"0.5s",
-            "transform":"scale(2,2)"
+            "transform":"scale(1.5)"
         });
         $(this).children("a").children("div").css({
             "transition":"0.5s",
@@ -50,6 +50,7 @@ $(function () {
             "background-size":"100% auto",
 
     });
+
     }
     one();
     $(window).resize(function () {

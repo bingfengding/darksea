@@ -50,5 +50,23 @@
     function treasure() {
         
     }
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    if(!IsPC()){
+        alert("该页面含有大量flash，暂不支持手机访问，请更换PC访问或添加手机端flash");
+    }
+
 </script>
 </html>
