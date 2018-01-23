@@ -22,7 +22,24 @@ $(function () {
         $('html,body').animate({scrollTop:parseFloat(len(512))},1000);
     };
     treasure = function treasure() {
-        window.location.href = "http://www.mydarksea.com/home/treasure.html";
+        var pwd = prompt("请输入验证码","");
+
+        $.ajax({
+            type:"POST",
+            url:"./php/treasure.php",
+            data:{
+                pwd: pwd
+            },
+            success:function (response, status, xhr) {
+                if(response){
+                    window.location.href = "http://www.mydarksea.com/home/treasure.html";
+                }else{
+                    alert("验证码错误，私人空间非邀请人暂时不开放");
+                }
+
+            }
+        });
+
 
     };
 
