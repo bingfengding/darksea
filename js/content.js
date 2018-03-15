@@ -36,7 +36,7 @@ $(function () {
         }else{
             var newUrl = "content.html?room";
             history.pushState({}, "", newUrl);
-            $("#granddadContent").html('<div id="fatherContent" style="overflow:hidden"><div id="content"><div id="room"><ul class="clearfix"><li>姓名:丁海洋</li><li>年龄:29</li><li>性别:男</li><li>籍贯:重庆</li><li>毕业院校:浙江理工大学</li><li>专业:经济学</li><li>爱好:编程,动漫,食物</li></ul><ul class="skill"><li>个人技能</li><li><strong>HTML5</strong><span><i class="skilled">熟练</i></span></li><li><strong>JavaScript</strong><span><i class="master">精通</i></span></li><li><strong>Web前端</strong><span><i class="master">精通</i></span></li><li><strong>UI</strong><span><i class="commonly">一般</i></span></li><li><strong>MySQL</strong><span><i class="good">良好</i></span></li><li><strong>PHP</strong><span><i class="skilled">熟练</i></span></li><li><strong>Flash</strong><span><i class="commonly">一般</i></span></li><li><strong>Illustrator</strong><span><i class="good">良好</i></span></li><li><strong>PhotoShop</strong><span><i class="skilled">熟练</i></span></li><li><strong>英语</strong><span><i class="good">良好</i></span></li></ul></div></div></div>');
+            $("#granddadContent").html('<div id="fatherContent" style="overflow:hidden"><div id="content"><div id="room"><ul class="clearfix"><li>姓名:丁海洋</li><li>年龄:29</li><li>性别:男</li><li>籍贯:重庆</li><li>毕业院校:浙江理工大学</li><li>专业:经济学</li><li>爱好:编程,动漫,食物</li></ul><ul class="skill"><li>个人技能</li><li><strong>HTML5</strong><span><i class="skilled">熟练</i></span></li><li><strong>JavaScript</strong><span><i class="master">精通</i></span></li><li><strong>Web前端</strong><span><i class="master">精通</i></span></li><li><strong>UI</strong><span><i class="commonly">一般</i></span></li><li><strong>Webpack</strong><span><i class="good">良好</i></span></li><li><strong>Vue</strong><span><i class="skilled">熟练</i></span></li><li><strong>MySQL</strong><span><i class="good">良好</i></span></li><li><strong>PHP</strong><span><i class="skilled">熟练</i></span></li><li><strong>Flash</strong><span><i class="commonly">一般</i></span></li><li><strong>Illustrator</strong><span><i class="good">良好</i></span></li><li><strong>PhotoShop</strong><span><i class="skilled">熟练</i></span></li><li><strong>英语</strong><span><i class="good">良好</i></span></li></ul></div></div></div>');
             one();
         }
 
@@ -64,17 +64,11 @@ $(function () {
     messagea = function messagea(val) {
         //console.log($("#massage"));
         if ($("#massage")[0]) {
-
         } else {
-
-
         var newUrl = "content.html?message";
         history.pushState({}, "", newUrl);
-
         $("#granddadContent").html('<div id="fatherContent" style="overflow:hidden"><div id="content"><div id="massage"><form id="massageForm" action="" ><div class="userM"><span>联系人: </span><input type="text" name="user" class="user"></div><textarea name="massageContent" class="massageContent"></textarea><div class="footerForm clearfix"><input type="button" value="提交" id="massageSub"><input type="button" value="取消" id="massageHide" ></div></form></div></div></div><input type="button" value="留言" class="massageIpt">');
-
         //console.log("写入HTML信息");
-
         $('.massageIpt').click(function () {
             $("#massage ul").hide();
             if ($('#massageForm').is(":hidden")) {
@@ -91,7 +85,7 @@ $(function () {
                 url: './php/massage.php',
                 data: {
                     user: $("form .user").val(),
-                    content: $("form .massageContent").val(),
+                    content: $("form .massageContent").val()
                 },
                 success: function (response, status, xhr) {
                     $("#massageForm").hide();
@@ -218,11 +212,11 @@ $(function () {
             'margin-left':len(530),
             'padding':len(5),
             'width':len(435),
-            'height':len(325),
+            'height':len(325)
         });
         $('#fatherContent').css({
             'width':len(435),
-            'height':len(325),
+            'height':len(325)
         });
         $('#content').css({
             'padding-right':len(10),
@@ -234,7 +228,7 @@ $(function () {
             'margin-top':len(570),
             'width':len(500),
             'height':len(30),
-            'line-height':len(30),
+            'line-height':len(30)
         });
         $('.massageIpt').css({
             'top' :len(-30),
@@ -244,14 +238,14 @@ $(function () {
             'font-size':len(14)
         });
         $('#massageForm').css({
-            'padding-left':len(10),
+            'padding-left':len(10)
         });
         $('#massageForm .userM').css({
-            'padding-bottom':len(10),
+            'padding-bottom':len(10)
         });
         $('#massageForm .userM span').css({
             'height':len(25),
-            'line-height':len(25),
+            'line-height':len(25)
         });
         $('#massage li p').css({
             'padding-bottom':len(10),
@@ -269,21 +263,21 @@ $(function () {
         });
         $("#massageForm .footerForm").css({
             'padding-top':len(10),
-            'margin-right':len(20),
+            'margin-right':len(20)
         });
         $("#massageForm .footerForm input").css({
             'width':len(40),
             'height':len(25),
             'font-size':len(14),
-            'border-radius':len(5),
+            'border-radius':len(5)
 
         });
         $("#massageSub").css({
             'margin-left':len(250),
-            'margin-right':len(10),
+            'margin-right':len(10)
         });
         $("#address").css({
-            'padding':len(10),
+            'padding':len(10)
         });
         $("#address li").css({
             'width':len(400),
@@ -310,11 +304,11 @@ $(function () {
         //room css
         $("#room li").css({
             'height':len(30),
-            'line-height':len(30),
+            'line-height':len(30)
         });
         $("#room ul:last-of-type strong").css({
             'width':len(80),
-            'line-height':len(30),
+            'line-height':len(30)
         });
         $("#room ul:last-of-type span").css({
             'width':len(320),
@@ -332,11 +326,11 @@ $(function () {
 
         $("#room ul:first-of-type li").css({
             'padding':len(3),
-            'margin-bottom':len(10),
+            'margin-bottom':len(10)
         });
         $("#room .skill li").css({
             'padding-left':len(10),
-            'margin-bottom':len(10),
+            'margin-bottom':len(10)
         });
         $('.commonly').css({
             'width':len(80)
@@ -355,22 +349,22 @@ $(function () {
         $("#lift").css({
             'padding-right':len(20),
             'padding-left':len(10),
-            'font-size':len(12),
+            'font-size':len(12)
 
         });
         $("#lift li").css({
-            'padding':len(5),
+            'padding':len(5)
 
 
         });
         $("#lift p").css({
-            'padding-bottom':len(10),
+            'padding-bottom':len(10)
         });
         $("#lift p span").css({
-            'font-size':len(14),
+            'font-size':len(14)
         });
         $("#lift p span:first-of-type").css({
-            'width':len(180),
+            'width':len(180)
         });
         //console.log('one方法在执行');
     }

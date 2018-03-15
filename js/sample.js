@@ -24,7 +24,7 @@ $(function () {
     },function () {
         $(this).css({
             "transition":"0.5s",
-            "transform":"scale(1,1)",
+            "transform":"scale(1,1)"
         });
         $(this).children("a").children("div").css({
             "transition":"0.5s",
@@ -39,7 +39,7 @@ $(function () {
             "margin-top":setRem(120),
             "margin-left":setRem(400),
             "padding-left":setRem(10),
-            "padding-top":setRem(5),
+            "padding-top":setRem(5)
         });
         $('#sample li').css({
             "width":setRem(160),
@@ -47,7 +47,7 @@ $(function () {
             "margin-right":setRem(92),
             "margin-bottom":setRem(160),
             "background":"url('./images/4.jpg') no-repeat",
-            "background-size":"100% auto",
+            "background-size":"100% auto"
 
     });
 

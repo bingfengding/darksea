@@ -65,6 +65,16 @@ i {
   background-size: 95%;
   background-position: 100% 20%;
 }
+#sample ul li a.todo {
+  background: url("../images/todo.png") no-repeat;
+  background-size: 95%;
+  background-position: 100% 20%;
+}
+#sample ul li a.cardbattle {
+  background: url("../images/gameCardBattle.png") no-repeat;
+  background-size: 95%;
+  background-position: 100% 20%;
+}
 #sample:after {
   content: "";
   clear: both;
