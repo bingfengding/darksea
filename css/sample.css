@@ -75,6 +75,16 @@ i {
   background-size: 95%;
   background-position: 100% 20%;
 }
+#sample ul li a.templerun {
+  background: url("../images/gametemplerun.png") no-repeat;
+  background-size: 95%;
+  background-position: 100% 20%;
+}
+#sample ul li a.multiply {
+  background: url("../images/gamemultiplydefense.png") no-repeat;
+  background-size: 95%;
+  background-position: 100% 20%;
+}
 #sample:after {
   content: "";
   clear: both;
